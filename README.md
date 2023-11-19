@@ -22,6 +22,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#sys-des">System Design</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -29,11 +30,10 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#contact">Contact</a></li>>
+<li><a href="#instructions">Instructions</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
-
-
 
 
 <!-- ABOUT THE PROJECT -->
@@ -70,6 +70,17 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [![Elasticsearch]]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SYSTEM DESIGN -->
+## System Design
+
+### Log Ingestion Design
+<img src="src/main/resources/static/images/log-ingest.png" alt="Logo" width="400" height="200">
+
+### Query Design
+<img src="src/main/resources/static/images/log-query.png" alt="Logo" width="400" height="200">
+
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -116,7 +127,8 @@ Setup of the following is needed locally to run the application :
 ## Contact
 
 Kallol Bairagi - [@kallob14](https://twitter.com/kallolb14) - kallolb22@gmail.com
-Project Link: [https://github.com/kabee/franky](https://github.com/kaybee/franky)
+
+Project Link: [https://github.com/kbnewbee/franky](https://github.com/kbnewbee/franky)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

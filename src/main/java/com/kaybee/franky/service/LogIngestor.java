@@ -11,7 +11,7 @@ public class LogIngestor implements ILogIngestor {
     @Autowired
     private ProducerService producerService;
 
-    private static final String TOPIC_NAME = "topic-logs";
+    private static final String TOPIC_NAME = "topic-franky";
 
     @Override
     public void ingestLogs(LogData logData) {

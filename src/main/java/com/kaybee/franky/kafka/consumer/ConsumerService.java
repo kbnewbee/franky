@@ -14,16 +14,21 @@ public class ConsumerService {
 
     @Autowired
     private LogProcessor logProcessor;
+
+    private static final String TOPIC_NAME = "topic-logs";
+    private static final String GROUP_ID = "group-logs";
+    private static final String CONCURRENCY = "3";
+
     private final ExecutorService executorService = Executors.newFixedThreadPool(30);
 
     @KafkaListener(
-            topics = {"topic-logs"},
-            groupId = "group-id-1",
-            concurrency = "3"
+            topics = {TOPIC_NAME},
+            groupId = GROUP_ID,
+            concurrency = CONCURRENCY
     )
-    public void consumeMessage(LogData logData) {
+    public void consumeMessage(final LogData logData) {
         System.out.println("Consumed = " + logData);
-        executorService.submit(()->{
+        executorService.submit(() -> {
             logProcessor.process(logData);
         });
     }

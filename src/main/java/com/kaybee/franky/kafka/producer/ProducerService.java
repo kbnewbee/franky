@@ -21,7 +21,7 @@ public class ProducerService {
     public void sendMessage(String topic, LogData logData) {
 
         ListenableFuture<SendResult<String, LogData>> result =
-                kafkaTemplate.send(topic, logData.getMetadata().getParentResourceId(), logData);
+                kafkaTemplate.send(topic, logData.getResourceId(), logData);
 
         result.addCallback(r -> {
             if (r != null && r.getProducerRecord() != null) {
@@ -36,7 +36,7 @@ public class ProducerService {
 
         for (LogData logData : logDataList) {
             ListenableFuture<SendResult<String, LogData>> result =
-                    kafkaTemplate.send(topic, logData.getMetadata().getParentResourceId(), logData);
+                    kafkaTemplate.send(topic, logData.getResourceId(), logData);
 
             result.addCallback(r -> {
                 if (r != null && r.getProducerRecord() != null) {

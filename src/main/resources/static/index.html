@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Log Search</h1>
+    <form id="searchForm">
+        <label for="level">level:</label>
+        <input type="text" id="level" name="level" placeholder="Enter log level">
+
+        <label for="message">message:</label>
+        <input type="text" id="message" name="message" placeholder="Enter log message">
+
+        <label for="message">start timestamp:</label>
+        <input type="text" id="startDate" name="startDate" placeholder="Enter log startDate">
+
+        <label for="message">end timestamp:</label>
+        <input type="text" id="endDate" name="endDate" placeholder="Enter log endDate">
+
+        <label for="message">traceId:</label>
+        <input type="text" id="traceId" name="traceId" placeholder="Enter log traceId">
+
+        <label for="message">resourceId:</label>
+        <input type="text" id="resourceId" name="resourceId" placeholder="Enter log resourceId">
+
+        <label for="message">spanId:</label>
+        <input type="text" id="spanId" name="spanId" placeholder="Enter log spanId">
+
+        <label for="message">commit:</label>
+        <input type="text" id="commit" name="commit" placeholder="Enter log commit">
+
+        <label for="message">parentResourceId:</label>
+        <input type="text" id="parentResourceId" name="parentResourceId" placeholder="Enter log parentResourceId">
+
+        <button type="button" onclick="searchLogs()">Search</button>
+    </form>
+
+    <div id="results"></div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

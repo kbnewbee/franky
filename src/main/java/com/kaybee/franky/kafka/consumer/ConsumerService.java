@@ -15,7 +15,7 @@ public class ConsumerService {
     @Autowired
     private LogProcessor logProcessor;
 
-    private static final String TOPIC_NAME = "topic-logs";
+    private static final String TOPIC_NAME = "topic-franky";
     private static final String GROUP_ID = "group-logs";
     private static final String CONCURRENCY = "3";
 

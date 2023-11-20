@@ -8,8 +8,6 @@
 
   <p align="center">
     Log Ingestor Web Application
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -22,7 +20,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#sys-des">System Design</a></li>
+    <li><a href="#instructions">Instructions</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -31,9 +29,12 @@
       </ul>
     </li>
     <li><a href="#instructions">Instructions</a></li>
-    <li><a href="#contact">Contact</a></li>>
+    <li><a href="#instructions">Features</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
+
+
 
 
 <!-- ABOUT THE PROJECT -->
@@ -80,7 +81,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 ### Query Design
 <img src="src/main/resources/static/images/log-query.png" alt="Logo" width="400" height="200">
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -100,7 +100,7 @@ Setup of the following is needed locally to run the application :
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/dyte-submissions/november-2023-hiring-kbnewbee
    ```
 2. Run zookeeper
    ```sh
@@ -115,9 +115,21 @@ Setup of the following is needed locally to run the application :
    kafka-topics.bat --create --topic topic-franky --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3
    ```
 5. Change the ssl config to false
+   ```sh
+   cd elasticsearch-8.11.1\config\elasticsearch.yml
+   
+   xpack.security.enabled: false
+   xpack.security.enrollment.enabled: false
+   xpack.security.transport.ssl:
+     enabled: false
+   xpack.security.http.ssl:
+     enabled: false
+   ```
 6. Run elasticsearch
    ```sh
-   bin\elasticsearch.bat
+   cd elasticsearch-8.11.1\bin
+
+   elasticsearch.bat
    ```
 7. Run the Spring Boot application
 
@@ -183,7 +195,7 @@ Setup of the following is needed locally to run the application :
    ```
    <img src="src/main/resources/static/images/query-ui.png" alt="Logo" width="300" height="300">
 
-4. Use a filter or multiple filters to search the logs.   
+4. Use a filter or multiple filters to search the logs.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -209,7 +221,6 @@ Setup of the following is needed locally to run the application :
 Kallol Bairagi - [@kallob14](https://twitter.com/kallolb14) - kallolb22@gmail.com
 
 Project Link: [https://github.com/dyte-submissions/november-2023-hiring-kbnewbee](https://github.com/dyte-submissions/november-2023-hiring-kbnewbee)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

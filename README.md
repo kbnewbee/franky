@@ -22,7 +22,11 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+<<<<<<< Updated upstream
     <li><a href="#sys-des">System Design</a></li>
+=======
+    <li><a href="#instructions">Instructions</a></li>
+>>>>>>> Stashed changes
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -30,8 +34,13 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+<<<<<<< Updated upstream
 <li><a href="#instructions">Instructions</a></li>
     <li><a href="#contact">Contact</a></li>
+=======
+    <li><a href="#instructions">Instructions</a></li>
+    <li><a href="#contact">Contact</a></li>>
+>>>>>>> Stashed changes
   </ol>
 </details>
 
@@ -42,7 +51,7 @@
 This idea of this project is to build a End-To-End Web Application for Log Ingestion that can efficiently handle vast volumes of log data, and offer a simple interface for querying this data using full-text search or specific field filters. The logs are ingested over HTTP on port `3000`. I have tried my best to ensure scalability to handle high volumes of logs efficiently using event-driven distributed architecture.
 
 Sample Log Data Format:
-
+  ```sh
 {
 	"level": "error",
 	"message": "Failed to connect to DB",
@@ -55,7 +64,7 @@ Sample Log Data Format:
         "parentResourceId": "server-0987"
     }
 }
-
+  ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
@@ -80,8 +89,11 @@ This section should list any major frameworks/libraries used to bootstrap your p
 ### Query Design
 <img src="src/main/resources/static/images/log-query.png" alt="Logo" width="400" height="200">
 
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -113,22 +125,107 @@ Setup of the following is needed locally to run the application :
    ```
 4. Create kafka topic
    ```js
-   kafka-topics.bat --create --topic topic-logs --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3
+   kafka-topics.bat --create --topic topic-franky --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3
    ```
 5. Change the ssl config to false
-6. Run elasticsearch.bat
-7. Run the application using `maven`
+6. Run elasticsearch
    ```sh
-   mvn clean install
+   bin\elasticsearch.bat
    ```
+7. Run the Spring Boot application
+
+## Instructions
+1. The application would run on port `3000`
+2. It provides two APIs for log ingestion
+   ```sh
+   This API can be used to insert one log JSON at a time:
+   
+   POST http://localhost:3000/api/logs/ingest
+   ```
+   ```sh
+   Request Body :
+   
+   {
+     "level": "info",
+     "message": "Failed to connect to DB",
+     "resourceId": "server-11",
+     "timestamp": "2023-09-15T08:00:00Z",
+     "traceId": "abc-xyz-17",
+     "spanId": "span-16",
+     "commit": "5e5342f",
+     "metadata": {
+        "parentResourceId": "server1-0395"
+     }
+   }
+   ```
+   ```sh
+   This API can be used to insert multiple log JSON at a time:
+   
+   POST http://localhost:3000/api/logs/ingest/batch
+   ```
+   ```sh
+   Request Body :
+   [{
+	    "level": "error",
+	    "message": "Failed to connect to DB",
+        "resourceId": "server-1234",
+	    "timestamp": "2021-09-09T08:00:00Z",
+	    "traceId": "abc-xyz-40",
+        "spanId": "span-1",
+        "commit": "5f5342f",
+        "metadata": {
+            "parentResourceId": "server1-0395"
+        }
+    },
+    {
+        "level": "debug",
+        "message": "Failed to connect to DB",
+        "resourceId": "server-1234",
+        "timestamp": "2021-09-10T08:00:00Z",
+        "traceId": "abc-xyz-41",
+        "spanId": "span-2",
+        "commit": "5f5342f",
+        "metadata": {
+            "parentResourceId": "server2-0495"
+        }
+    }]
+   ```   
+3. Once the logs are pushed, we can query using a simple query interface
+   ```sh
+   http://localhost:3000/index.html
+   ```
+   <img src="src/main/resources/static/images/query-ui.png" alt="Logo" width="300" height="300">
+
+4. Use a filter or multiple filters to search the logs.   
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Features
+- Offer a user interface (Web UI or CLI) for full-text search across logs.
+- Include filters based on:
+    - level
+    - message
+    - resourceId
+    - timestamp
+    - traceId
+    - spanId
+    - commit
+    - metadata.parentResourceId
+- Bonus feature
+    - Implement search within specific date ranges
+    - Allow combining multiple filters
+    - Provide real-time log ingestion and searching capabilities.
+
 
 ## Contact
 
 Kallol Bairagi - [@kallob14](https://twitter.com/kallolb14) - kallolb22@gmail.com
 
+<<<<<<< Updated upstream
 Project Link: [https://github.com/kbnewbee/franky](https://github.com/kbnewbee/franky)
+=======
+Project Link: [https://github.com/dyte-submissions/november-2023-hiring-kbnewbee](https://github.com/dyte-submissions/november-2023-hiring-kbnewbee)
+>>>>>>> Stashed changes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

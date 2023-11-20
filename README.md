@@ -22,11 +22,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-<<<<<<< Updated upstream
     <li><a href="#sys-des">System Design</a></li>
-=======
-    <li><a href="#instructions">Instructions</a></li>
->>>>>>> Stashed changes
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -34,13 +30,8 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-<<<<<<< Updated upstream
-<li><a href="#instructions">Instructions</a></li>
-    <li><a href="#contact">Contact</a></li>
-=======
     <li><a href="#instructions">Instructions</a></li>
     <li><a href="#contact">Contact</a></li>>
->>>>>>> Stashed changes
   </ol>
 </details>
 
@@ -89,11 +80,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 ### Query Design
 <img src="src/main/resources/static/images/log-query.png" alt="Logo" width="400" height="200">
 
-<<<<<<< Updated upstream
 
-
-=======
->>>>>>> Stashed changes
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -221,11 +208,8 @@ Setup of the following is needed locally to run the application :
 
 Kallol Bairagi - [@kallob14](https://twitter.com/kallolb14) - kallolb22@gmail.com
 
-<<<<<<< Updated upstream
-Project Link: [https://github.com/kbnewbee/franky](https://github.com/kbnewbee/franky)
-=======
 Project Link: [https://github.com/dyte-submissions/november-2023-hiring-kbnewbee](https://github.com/dyte-submissions/november-2023-hiring-kbnewbee)
->>>>>>> Stashed changes
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

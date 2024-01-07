@@ -220,8 +220,6 @@ Setup of the following is needed locally to run the application :
 
 Kallol Bairagi - [@kallob14](https://twitter.com/kallolb14) - kallolb22@gmail.com
 
-Project Link: [https://github.com/dyte-submissions/november-2023-hiring-kbnewbee](https://github.com/dyte-submissions/november-2023-hiring-kbnewbee)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
